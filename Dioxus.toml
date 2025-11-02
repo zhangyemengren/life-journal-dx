@@ -1,7 +1,6 @@
 [application]
 
 [web.app]
-
 # HTML title tag content
 title = "life-journal-dx"
 
