@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 use crate::pages::{Home, Profile, Task};
-use crate::components::TabBarWrapper;
+use crate::components::tab_bar::TabBarWrapper;
 
 #[derive(Clone, Debug, PartialEq, Routable)]
 pub enum Route {

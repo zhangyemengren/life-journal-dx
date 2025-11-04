@@ -1,4 +1,2 @@
-mod tab_bar;
-
-pub use tab_bar::{TabBarWrapper};
-
+pub mod tab_bar;
+pub mod tabs;
