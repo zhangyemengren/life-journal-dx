@@ -4,6 +4,7 @@ use crate::routers::Route;
 #[component]
 pub fn TabBar() -> Element {
     rsx! {
+        document::Link { rel: "stylesheet", href: asset!("./style.css") }
         nav {
             class: "tab-bar",
             Link { to: Route::Home{}, "🏠 首页" }
