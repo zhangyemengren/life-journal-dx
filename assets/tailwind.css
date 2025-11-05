@@ -7,6 +7,8 @@
     'Noto Color Emoji';
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
+    --color-gray-700: oklch(37.3% 0.034 259.733);
+    --spacing: 0.25rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -160,14 +162,43 @@
   .visible {
     visibility: visible;
   }
+  .fixed {
+    position: fixed;
+  }
   .static {
     position: static;
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
+  .flex {
+    display: flex;
+  }
+  .h-16 {
+    height: calc(var(--spacing) * 16);
+  }
+  .w-full {
+    width: 100%;
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
+  .items-center {
+    align-items: center;
+  }
+  .justify-around {
+    justify-content: space-around;
+  }
+  .bg-gray-700 {
+    background-color: var(--color-gray-700);
+  }
 }
-@layer component, page;
+@layer utilities, component, page;
+@layer utilities {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;

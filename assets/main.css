@@ -1,0 +1,34 @@
+@layer page {
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+    }
+    a {
+        color: inherit;           /* 继承父元素文字颜色 */
+        text-decoration: none;    /* 去掉默认下划线 */
+        background: none;         /* 移除可能的默认背景（如某些 UA） */
+        cursor: pointer;          /* 保持可点击手势 */
+        outline: none;            /* 去除默认 focus 外轮廓 */
+    }
+
+    a:focus,
+    a:active,
+    a:hover {
+        outline: none;
+        color: inherit;           /* 可选：悬浮仍继承，不改变颜色 */
+        text-decoration: none;
+    }
+    a:visited {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    #main{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+}

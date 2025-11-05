@@ -5,8 +5,6 @@ mod components;
 use dioxus::prelude::*;
 use routers::Route;
 
-static CSS: Asset = asset!("/assets/main.css");
-
 fn main() {
     dioxus::launch(App);
 }
@@ -16,7 +14,20 @@ fn main() {
 #[component]
 fn App() -> Element {
     rsx! {
-        document::Stylesheet { href: CSS }
+        document::Meta {
+            name: "viewport",
+            content: "width=device-width, initial-scale=1.0, viewport-fit=cover"
+        }
+        document::Meta {
+            name: "apple-mobile-web-app-capable",
+            content: "yes"
+        }
+        document::Stylesheet {
+            href: asset!("/assets/main.css")
+        }
+        document:: Stylesheet {
+            href: asset!( "/assets/tailwind.css" )
+        }
         Router::<Route> {}
     }
 }
